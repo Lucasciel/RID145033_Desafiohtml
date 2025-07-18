@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Cor-de-fundo: #02A28F;
+    --Letra-branca: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+header {
+    height: 15vh;
+    background-color: var(--Cor-de-fundo);
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    color: var(--Letra-branca);
+    padding-left: 6%;
+}
+
+main {
+    display: flex;
+    padding: 0 4%;
+    gap: 10px;
+}
+
+section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#image {
+    border-radius: 10px;
+    height: 50vh;
+    background-image: linear-gradient(to top, #000000, #66666600),
+        url(./img/predios.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: end;
+    width: 100%;
+    box-shadow: 0px 8px 12px -6px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: var(--Letra-branca);
+        padding: 10px 20px 30px 20px;
+        height: min-content;
+    }
+
+}
+
+aside {
+    flex: 1;
+}
+
+article {
+    background-color: var(--Cor-de-fundo);
+    border-radius: 10px;
+    color: var(--Letra-branca);
+    padding: 20px;
+    box-shadow: 0px 8px 12px -6px var(--Cor-de-fundo);
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        a {
+            color: var(--Letra-branca);
+
+        }
+    }
+}
+
+#postscontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    p{
+        color: #616161;
+    }
+}
+
+.post {
+    border-radius: 10px;
+    box-shadow: 0px 8px 12px -6px;
+    display: grid;
+}
+
+.imagePosts {
+    border-radius: 10px 10px 0 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.contentPost {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p:first-child {
+        color: #02A28F !important ;
+    }
+}
+
+.images {
+    border-radius: 10px 10px 0 0;
+    height: 35vh;
+    width: 100%;
+}
+
+footer {
+    color: var(--Letra-branca);
+    font-weight: 600;
+    font-size: 15px;
+    height: 8vh;
+    background-color: var(--Cor-de-fundo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.postsPopularesContainer li {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 12px -6px;
+}
+
+aside ul li:first-child {
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--Letra-branca);
+    background-color: var(--Cor-de-fundo);
+    box-shadow: 0px 8px 12px -6px var(--Cor-de-fundo) !important;
+}
+
+.postsPopulares {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    img {
+        width: 100%;
+        height: 100px;
+        border-radius: 10px;
+    }
+}
+
+#Categorias li:first-child {
+    color: var(--Letra-branca);
+}
+
+#Categorias li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #616161;
+}
+
+@media (max-width: 1134px) {
+    aside ul {
+        gap: 30px;
+
+        h3{
+            font-size: 14px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        gap: 5vh;
+    }
+    header {
+        justify-content: center;
+        height: 10vh;
+
+        h1{
+            font-size: 20px;
+        }
+    }
+    aside ul li:first-child {
+        text-align: center;
+    }
+
+    #Categorias li:first-child {
+        justify-content: center;
+    }
+
+    main {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    aside ul {
+        gap: 30px;
+
+        h3{
+            font-size: 16px;
+        }
+    }
+
+    #postscontainer {
+        grid-template-columns: 1fr;
+    }
+
+    .images {
+        height: 40vh;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}
